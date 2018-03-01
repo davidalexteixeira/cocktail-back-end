@@ -1,3 +1,4 @@
+const cors = require('cors');
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
@@ -14,6 +15,11 @@ mongoose.connect('mongodb://localhost/cocktails-db', {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE
 });
+
+app.use(cors({
+  credentials: true,
+  origin: ['http://localhost:4200']
+}));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
