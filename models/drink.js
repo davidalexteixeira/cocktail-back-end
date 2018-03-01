@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const DrinkSchema = new Schema({
   name: String,
   type: String,
+  imageUrl: String,
   ingredients: [
     {
       name: String,
