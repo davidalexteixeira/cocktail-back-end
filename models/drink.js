@@ -6,11 +6,11 @@ const DrinkSchema = new Schema({
   name: String,
   type: String,
   ingredients: [
-      {
-          name: String,
-          quantity: Number,
-          unit: String
-      }
+    {
+      name: String,
+      quantity: Number,
+      unit: String
+    }
   ]
 });
 
