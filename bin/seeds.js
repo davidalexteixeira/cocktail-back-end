@@ -1,4 +1,3 @@
-import { ucs2 } from 'punycode';
 
 var drinks = [
   {
