@@ -1,3 +1,8 @@
+const mongoose = require('mongoose');
+const Drink = require('../models/drink');
+
+const dbName = 'cocktails-db';
+mongoose.connect(`mongodb://localhost/${dbName}`);
 
 var drinks = [
   {
@@ -186,3 +191,8 @@ var drinks = [
     ]
   }
 ];
+
+Drink.create(drinks, (err) => {
+  if (err) { throw (err); }
+  console.log(`Created ${drinks.length} drinks`);
+});
